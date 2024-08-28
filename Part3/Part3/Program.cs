@@ -1,16 +1,28 @@
-﻿//5. Maximum of Three:
+﻿//3. Ask the user to input their test score (0-100):
 
-Console.WriteLine("Enter three numbers: ");
-string input1 = Console.ReadLine();
-string input2 = Console.ReadLine();
-string input3 = Console.ReadLine();
+Console.WriteLine("Enter your test score: ");
+string input = Console.ReadLine();
 
-if (int.TryParse(input1, out int num1) && int.TryParse(input2, out int num2) && int.TryParse(input3, out int num3))
+if (int.TryParse(input, out int score))
 {
-    int max = Math.Max(num1, Math.Max(num2, num3));
-    Console.WriteLine("The maximum number is: " + max);
-}
-else
-{
-    Console.WriteLine("Invalid input. Please enter valid numbers.");
+    if (score < 60)
+    {
+        Console.WriteLine("F");
+    }
+    if (score >= 60 && score < 70)
+    {
+        Console.WriteLine("D");
+    }
+    if (score >= 70 && score < 80)
+    {
+        Console.WriteLine("C");
+    }
+    if (score >= 80 && score < 90)
+    {
+        Console.WriteLine("B");
+    }
+    if (score >= 90 && score <= 100)
+    {
+        Console.WriteLine("A");
+    }
 }
