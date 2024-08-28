@@ -1,7 +1,5 @@
 ﻿//1. Even or Odd:
 
-using System;
-
 Console.WriteLine("Enter a number: ");
 string input = Console.ReadLine();
 
